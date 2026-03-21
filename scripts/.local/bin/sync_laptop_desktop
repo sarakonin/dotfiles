@@ -1,0 +1,22 @@
+#!/bin/bash
+
+DEST="s@192.168.0.26"
+
+pairs=(
+		"$HOME/Documents/:$DEST:~/Documents"
+		"$HOME/Pictures/:$DEST:~/Pictures"
+		"$HOME/Music/:$DEST:~/Music"
+		"$HOME/Videos/:$DEST:~/Videos"
+)
+
+for entry in "${pairs[@]}"; do
+		src="${entry%%:*}"
+		dst="${entry#*:}"
+
+		echo "=== Syncing $src to $dst ==="
+
+		systemd-inhibit --why="Syncing $src to $dst" \
+		rsync -avhP --info=progress2 --bwlimit=2000 "$src" "$dst"
+done
+
+echo "=== Syncing completed ==="

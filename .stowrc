@@ -1,0 +1,4 @@
+# ~/.dotfiles/.stowrc
+--target=/home/s
+--verbose=1
+--no-folding
