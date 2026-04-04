@@ -120,7 +120,8 @@ fi
  export PATH="$PATH:~/.local/opt/idea-IU-253.32098.37/bin"
  export PATH="$PATH:~/.local/opt/pycharm-2025.3.3/bin/pycharm"
  export PATH="$PATH:~/.local/opt/clion-2025.3.3/bin/clion"
-
+ export PATH="$PATH:~/.local/opt/RustRover-2025.3.5/bin/rustrover"
+ export PATH="$PATH:~/.local/opt/WebStorm-253.32098.39/bin/webstorm"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
